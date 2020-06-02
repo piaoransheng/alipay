@@ -30,14 +30,10 @@ public class OrderController {
 
 
         return  payService.aliPay(new AlipayBean()
-
-                .setBody(body)
-
-                .setOut_trade_no(out_trade_no)
-
-                .setTotal_amount(new StringBuffer().append(total_amount))
-
-                .setSubject(subject));
+                .setBody(body)  //描述
+                .setOut_trade_no(out_trade_no)  //订单号
+                .setTotal_amount(new StringBuffer().append(total_amount))  //金额
+                .setSubject(subject));   //订单名称
 
     }
 }
